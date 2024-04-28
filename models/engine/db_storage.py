@@ -64,7 +64,7 @@ class DBStorage:
         if cls_id in all_obJ_cls:
             return all_obJ_cls[cls_id]
         return None
-        
+
     def save(self):
         """commit all changes of the current database session"""
         self.__session.commit()

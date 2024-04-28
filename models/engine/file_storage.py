@@ -56,7 +56,6 @@ class FileStorage:
             return len(self.all())
         return len(self.all(cls))
 
-
     def save(self):
         """serializes __objects to the JSON file (path: __file_path)"""
         json_objects = {}
@@ -72,7 +71,7 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
-        except:
+        except(Exception):
             pass
 
     def delete(self, obj=None):
