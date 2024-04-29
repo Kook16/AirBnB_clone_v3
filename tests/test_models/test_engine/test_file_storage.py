@@ -123,7 +123,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIsInstance(storage.count(), int)
         self.assertIsInstance(storage.count(State), int)
         self.assertEqual(len(storage._FileStorage__objects), storage.count())
-    
+
     @unittest.skipIf(models.storage_t == 'db', "not testing file storage")
     def test_get(self):
         """Testing for the get method of the fsstorage"""
